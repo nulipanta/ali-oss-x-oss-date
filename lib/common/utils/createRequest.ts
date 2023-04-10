@@ -34,7 +34,7 @@ export function createRequest(this: any, params) {
     date = +new Date() + this.options.amendTimeSkewed;
   }
   const headers: Headers = {
-    'x-oss-date': dateFormat(date, "UTC:ddd, dd mmm yyyy HH:MM:ss 'GMT'")
+    'x-oss-date':  sessionStorage.getItem('GMT'),
   };
 
   if (typeof window !== 'undefined') {
